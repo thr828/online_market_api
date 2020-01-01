@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online_market_api", "online_market_api\online_market_api.csproj", "{14E9B4B2-6B44-4D84-A18E-7FC4F3BEF5C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E9B4B2-6B44-4D84-A18E-7FC4F3BEF5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E9B4B2-6B44-4D84-A18E-7FC4F3BEF5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E9B4B2-6B44-4D84-A18E-7FC4F3BEF5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E9B4B2-6B44-4D84-A18E-7FC4F3BEF5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0848C162-E489-466B-BD73-43BC7C2EAC39}
+	EndGlobalSection
+EndGlobal
