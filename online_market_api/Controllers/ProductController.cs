@@ -13,35 +13,60 @@ namespace online_market_api.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<Product> Get()
+        List<Product> list = new List<Product>()
         {
-            List<Product> list = new List<Product>();
-            Product p = new Product()
+            new Product()
             {
                 id = 1,
                 productImageUrl = "/static/productImg/product1.jpg",
                 price = 5899.99M,
-                productName= "笔记本电脑"
-            };
-            list.Add(p);
-            Product p1 = new Product()
+                productName = "笔记本电脑"
+            },
+            new Product()
             {
-                id = 1,
+                id = 2,
                 productImageUrl = "/static/productImg/product2.jpg",
                 price = 5899.99M,
                 productName = "笔记本电脑2"
-            };
-            list.Add(p1);
-            Product p2 = new Product()
+            },
+            new Product()
             {
-                id = 1,
+                id = 3,
                 productImageUrl = "/static/productImg/product3.jpg",
                 price = 5899.99M,
                 productName = "笔记本电脑3"
-            };
-            list.Add(p2);
+            }
+
+        };
+
+        [HttpGet]
+        public IEnumerable<Product> Get()
+        {
+         
             return list.ToArray();
         }
+        /// <summary>
+        /// 待参数的get(http://localhost:5676/api/product/3)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public Product Get(int id)
+        {
+            return list.Find(p => p.id == id);
+        }
+        /// <summary>
+        /// 请求 http://localhost:5676/api/product/3,4 ，符合restful
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        [HttpGet("{productId},{count}")]
+        public int Get(int productId, int count)
+        {
+            return productId+count;
+        }
+
+        
     }
 }

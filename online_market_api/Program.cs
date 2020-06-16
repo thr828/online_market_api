@@ -20,7 +20,7 @@ namespace online_market_api
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://*:5676").UseStartup<Startup>();
                 });
     }
 }
